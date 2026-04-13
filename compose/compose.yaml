@@ -1,9 +1,23 @@
 services:
+
+  docker:
+    image: docker:dind
+    privileged: true
+    environment:
+      - DOCKER_TLS_CERTDIR=/certs
+    volumes:
+      - jenkins-docker-certs:/certs/clients
+      - jenkins-data:/var/jenkins-home
+
+
   jenkins:
     build:
-    context: .
-    dockerfile: Dockerfile
-  ports:
+      context: .
+      dockerfile: Dockerfile
+    ports:
     - 8080:8080
-  volumes:
+    volumes:
     - jenkins-data:/var/jenkins_home/
+
+volumes:
+  jenkins-data:
