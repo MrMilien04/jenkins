@@ -3,21 +3,27 @@ services:
   docker:
     image: docker:dind
     privileged: true
+    command: [ "--storage-driver", "overlay2" ]
     environment:
       - DOCKER_TLS_CERTDIR=/certs
     volumes:
-      - jenkins-docker-certs:/certs/clients
-      - jenkins-data:/var/jenkins-home
-
+      - jenkins-docker-certs:/certs/client
+      - jenkins-data:/var/jenkins_home
 
   jenkins:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-    - 8080:8080
+      - 8080:8080
     volumes:
-    - jenkins-data:/var/jenkins_home/
+      - jenkins-data:/var/jenkins_home/
+      - jenkins-docker-certs:/certs/client:ro
+    environment:
+      - DOCKER_HOST=tcp://docker:2376
+      - DOCKER_CERT_PATH=/certs/client
+      - DOCKER_TLS_VERIFY=1
 
 volumes:
   jenkins-data:
+  jenkins-docker-certs:
