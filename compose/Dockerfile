@@ -12,3 +12,4 @@ RUN apt-get update && apt-get install -y lsb-release ca-certificates curl && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 USER jenkins
 RUN jenkins-plugin-cli --plugins "git docker-workflow"
+RUN jenkins-plugin-cli --plugins "junit"
