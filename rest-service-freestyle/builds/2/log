@@ -1,0 +1,25 @@
+Started by user [8mha:////4IWgfxQOPd0YV58bG1k75fyYIQ5hqimzdwV/qlfHvmJCAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/rest-service
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/rest-service/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/MrMilien04/jenkins # timeout=10
+Fetching upstream changes from https://github.com/MrMilien04/jenkins
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/MrMilien04/jenkins +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/main
+Seen 1 remote branch
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 187591d6d7fa7fb40ab69ce6d632ef23d9b84a27 (origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 187591d6d7fa7fb40ab69ce6d632ef23d9b84a27 # timeout=10
+Commit message: "add jenkins-docker"
+ > git rev-list --no-walk 298d4e430e171af91fe49e219c389131d3fc3a67 # timeout=10
+[rest-service] $ /bin/sh -xe /tmp/jenkins17546723042382246723.sh
++ mvn clean
+/tmp/jenkins17546723042382246723.sh: 2: mvn: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

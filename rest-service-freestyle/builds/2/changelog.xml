@@ -1,0 +1,10 @@
+commit 187591d6d7fa7fb40ab69ce6d632ef23d9b84a27
+tree fc1c0abb0cbb3ededa4efa95c9ccabb25669c464
+parent 298d4e430e171af91fe49e219c389131d3fc3a67
+author MrMilien04 <maximilien76600@gmail.com> 2026-04-13 17:03:33 +0200
+committer MrMilien04 <maximilien76600@gmail.com> 2026-04-13 17:03:33 +0200
+
+    add jenkins-docker
+
+
+:100644 100644 19b357cbecc8fd57da4592021e15654f2e29c26a 80d51133d5797cdea8ca6d60356d38efcf1ffa93 M	compose/compose.yaml

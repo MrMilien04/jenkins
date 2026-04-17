@@ -13,3 +13,4 @@ RUN apt-get update && apt-get install -y lsb-release ca-certificates curl && \
 USER jenkins
 RUN jenkins-plugin-cli --plugins "git docker-workflow"
 RUN jenkins-plugin-cli --plugins "junit"
+RUN jenkins-plugin-cli --plugins "pipeline-stage-view"

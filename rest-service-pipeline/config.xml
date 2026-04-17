@@ -1,0 +1,46 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1573.v1465f6f78810">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@2.2277.v00573e73ddf1"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2277.v00573e73ddf1">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@4285.v8df38f05c3c5">
+    <script>pipeline {
+    agent {
+        docker {
+            image &apos;maven:3.9.5-amazoncorretto-17&apos;
+        }
+    }
+
+
+    stages {
+        stage(&apos;clone&apos;) {
+            steps {
+                git branch: &apos;main&apos;, changelog: false, poll: false, url: &apos;https://github.com/MrMilien04/jenkins&apos;
+            }
+        }
+        stage(&apos;build&apos;) {
+            steps {
+                sh &apos;mvn clean&apos;
+                sh &apos;mvn test&apos;
+                sh &apos;mvn package&apos;
+                archiveArtifacts artifacts: &apos;target/*.jar&apos;, followSymlinks: false
+                junit allowEmptyResults: true, stdioRetention: &apos;ALL&apos;, testResults: &apos;target/surefire-reports/*.xml&apos;
+            }
+        }
+    }
+}
+</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

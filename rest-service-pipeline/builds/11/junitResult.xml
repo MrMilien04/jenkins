@@ -1,0 +1,55 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<result plugin="junit@1403.vd9d1413fd205">
+  <suites>
+    <suite>
+      <file>/var/jenkins_home/workspace/rest-service-pipeline/target/surefire-reports/TEST-fr.argonaultes.restservice.RestServiceApplicationTests.xml</file>
+      <name>fr.argonaultes.restservice.RestServiceApplicationTests</name>
+      <duration>1.678</duration>
+      <startTime>-1</startTime>
+      <properties/>
+      <time>1.678</time>
+      <nodeId>24</nodeId>
+      <enclosingBlocks>
+        <string>19</string>
+      </enclosingBlocks>
+      <enclosingBlockNames>
+        <string>build</string>
+      </enclosingBlockNames>
+      <cases>
+        <case>
+          <duration>0.52</duration>
+          <startTime>-1</startTime>
+          <className>fr.argonaultes.restservice.RestServiceApplicationTests</className>
+          <testName>contextLoads</testName>
+          <skipped>false</skipped>
+          <keepTestNames>false</keepTestNames>
+          <properties/>
+          <flakyFailures/>
+          <rerunFailures/>
+          <stdout>08:33:45.540 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [fr.argonaultes.restservice.RestServiceApplicationTests]: RestServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:33:45.599 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration fr.argonaultes.restservice.RestServiceApplication for test class fr.argonaultes.restservice.RestServiceApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___&apos;_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | &apos;_ | &apos;_| | &apos;_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  &apos;  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2026-04-17T08:33:45.864Z  INFO 266 --- [           main] f.a.r.RestServiceApplicationTests        : Starting RestServiceApplicationTests using Java 17.0.9 with PID 266 (started by ? in /var/jenkins_home/workspace/rest-service-pipeline)
+2026-04-17T08:33:45.865Z  INFO 266 --- [           main] f.a.r.RestServiceApplicationTests        : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2026-04-17T08:33:46.607Z  INFO 266 --- [           main] f.a.r.RestServiceApplicationTests        : Started RestServiceApplicationTests in 0.914 seconds (process running for 1.478)
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>1.678</duration>
+  <skipOldReports>false</skipOldReports>
+  <startTime>-1</startTime>
+  <stdioRetention>ALL</stdioRetention>
+  <keepTestNames>false</keepTestNames>
+  <keepProperties>false</keepProperties>
+</result>
